@@ -1,0 +1,49 @@
+
+.vNav {    
+    position: fixed;
+    top: 45%;
+    left: 2%;
+    z-index: 9999;
+    display: none;
+    @media @media-laptop{
+        display: block;
+    }
+    ul {
+        position: relative;
+        padding: 3px;
+        list-style-type: none;
+        li {
+            position: relative;
+            padding-bottom: 20px;
+            padding-left: 35%;
+            color: #ffffff;
+        }
+    }
+    a {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid;
+        border-color: #ffffff;
+        text-decoration: none;
+        &:hover {
+            border-radius: 50%;
+            background-color: #ffffff;
+            text-decoration: none;
+        }
+        &.active {
+            border-radius: 50%;
+            background-color:  #ffffff;
+            text-decoration: none;
+        }
+    }
+    .label {
+        color:  #ffffff;
+        width: 190px;
+        display: none;
+        position: relative;
+        margin-top: -6px;
+        margin-left: 15px;
+    }
+}

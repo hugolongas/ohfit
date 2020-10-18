@@ -1,0 +1,110 @@
+.footer {
+    background-color: #242323;
+    padding: 30px 10px;
+
+    @media @media-laptop {
+        padding: 45px 240px;
+    }
+
+    .footer-title {
+        font-size: 27px;
+        line-height: 1em;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+
+        @media @media-laptop {
+            font-size: 32px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+    }
+
+    .form-block {
+        margin-bottom: 50px;
+
+        .form-control {
+            background-color: #242323;
+            color: #ffffff;
+
+        }
+
+        .form-control::placeholder {
+            color: #ffffff;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn-ohfit {
+            width: 100%;
+        }
+    }
+
+    .contact-block {
+        text-align: center;
+
+        .contact-title {
+            font-size: 30px;
+            text-align: center;
+            color: #D2AB66;
+
+            @media @media-laptop {
+                font-size: 36px;
+            }
+
+            &:after {
+                display: block;
+                content: '';
+                width: 84px;
+                top: 228px;
+                height: 5px;
+                border-top: 3px solid #D2AB66;
+                margin: 0px auto 10px;
+
+                @media @media-laptop {
+                    margin: 0px auto 50px
+                }
+            }
+
+        }
+
+        .contact-info {
+            color: #ffffff;
+            display: inline-block;
+            text-align: left;
+            font-size: 20px;
+
+            @media @media-laptop {
+                font-size: 25px;
+            }
+
+            i {
+
+                color: #D2AB66;
+                margin-right: 15px;
+                float: left;
+            }
+
+            span {
+                display: block;
+                float: left;
+                width: 270px;
+
+                @media @media-laptop {
+                    width: 410px;
+                }
+            }
+            a{
+                color:#ffffff;
+                &:hover{
+                    color:#ffffff;
+                }
+                &:active{
+                    color:#ffffff;
+                }
+            }
+        }
+    }
+}
