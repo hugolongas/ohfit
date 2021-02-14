@@ -1060,17 +1060,29 @@
                 @endif
                 <div id="price_container">
                     @if(count($prices)==1)
-                    <label class="color-selected"><input type="hidden" name="price"
-                            value="{{$prices[0]}}" /><span>{{$prices[0]}} €</span></label>
+                    <label class="color-selected">
+                        <input type="hidden" name="price" value="1" />
+                        <span>{{$prices[1]}} €</span></label>
                     @else
-                    @foreach ($prices as $key=>$p)
-                    <label class="color"><input type="radio" name="price"><span>{{$p}} €</span></label>
-                    @endforeach
+                    <select name="price" id="price">
+                        <option value="">Selecciona una opción</option>
+                        @foreach ($prices as $key=>$p)
+                        {{$valor=""}}
+                        @if($key=="1")
+                        {{$valor="1 mes"}}
+                        @elseif($key=="3")
+                        {{$valor="3 meses"}}
+                        @elseif($key=="6")
+                        {{$valor="6 meses"}}
+                        @endif
+                        <option value="{{$key}}">{{$valor}} - {{$p}}€</option>
+                        @endforeach
+                    </select>
                     @endif
                 </div>
             </div>
             <input type="button" name="previous" class="previous btn btn-default" value="Anterior" />
-            <input type="submit" name="submit" class="submit btn btn-success" value="Continuar y Pagar" />
+            <input type="submit" name="submit" class="submit btn btn-success" value="Enviar Solicitud" />        
         </fieldset>
     </form>
 </div>

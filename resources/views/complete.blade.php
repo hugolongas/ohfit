@@ -4,11 +4,11 @@
 @section('content')    
 
 <div class="section-container">    
-    <h2 class="shop-complete-title">COMPRA COMPLETADA</h2>
+    <h2 class="shop-complete-title">CONSULTA COMPLETADA</h2>
     <div class="shop-complete-text">
     <p>
         Gracias por confiar en nosotros.
-        En unos días nos pondremos en contacto con tu plan personalizado.        
+        Nos pondremos en contacto lo más pronto posible, para acabar de concretar una reunión y preparar el plan personalizado.
     </p>
     <p>
         Para cualquier duda, estamos a tu disposición en los números y emails que encontrarás en la sección de contactos

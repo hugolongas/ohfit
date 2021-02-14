@@ -11,6 +11,7 @@ use App\Product;
 use Validator;
 use Redirect;
 
+
 use Illuminate\Support\Facades\Mail;
 
 use App\Mail\ProductMail;
@@ -26,12 +27,12 @@ class TrainingController extends Controller
     public function TrainingForm(Training $training)
     {
         $prices = array();
-        $prices[] = $training->price_one;
+        $prices["1"] = $training->price_one;
         if($training->price_three>0){
-            $prices[] = $training->price_three;
+            $prices["3"] = $training->price_three;
         }
         if($training->price_six>0){
-            $prices[] = $training->price_six;
+            $prices["6"] = $training->price_six;
         }
         return view('forms.'.$training->url)->with('training',$training)->with('prices',$prices)->with('type',$training->url);
     }
@@ -124,11 +125,18 @@ class TrainingController extends Controller
         $phone= $request->phone;
         $profession= $request->profession;
         $address= $request->address;
-        $price = $request->price;
+        $priceId = $request->price;
         $training = Training::findOrFail($request->idType);
         if($profession==null){
             $profession= "";
         }
+
+        $price = $training->price_one;
+        if($priceId==3)
+        $price = $training->price_three;
+        else if ($priceId==6)
+        $price = $training->price_six; 
+        
         $product = new Product();
         $product->training_id = $training->id;
         $product->name = $name;
@@ -143,33 +151,12 @@ class TrainingController extends Controller
         $product->paid = false;
         $product->save();
 
-        $redirectUrl = $this->dispatch(new MakePayment($product));
-        return $redirectUrl;
-    }
-
-    public function DietForm()
-    {
-        return view('forms.diet');
-    }
-
-    public function AllForm()
-    {
-        return view('forms.all');
-    }
-
-    public function Complete($idForm)
-    {
-        $cobrado = $this->dispatch(new CheckPayment());
+        $descripcion = "Producto: ".$training->name . " Usuario: ".$name;
         
-        if($cobrado)
-        {
-            $mailConfig = \Config::get('mail.training');
-            $product = Product::findOrFail($idForm);
-            $subject = $product->training->description;            
+            $mailConfig = \Config::get('mail.training');            
+            $subject = $product->training->name;            
             $emailTo =  $mailConfig['address'];
         Mail::to($emailTo)->send(new ProductMail($product, $subject));        
         return redirect()->route("home-complete");
-        }
-        return redirect()->route("training");
     }
 }
