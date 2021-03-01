@@ -38,7 +38,7 @@
         <hr/>
         <br/>
        <div>Mensaje:</div>
-       <p>{!! nl2br(e($mes)) !!}</p>
+       <p>{!! nl2br($mes) !!}</p>
        <br/>
        <hr/>
        <br/>

@@ -25,14 +25,22 @@
 </div>
 <hr/>    
 <div class="row">      
-    <div class="col-sm-4">
+    <div class="col-sm-3">
         <h5>Centro</h5>
         {{$solicitud->center}}
     </div>    
-    <div class="col-sm-4">
+    <div class="col-sm-3">
+        <h5>¿Que servicio necesitas?</h5>
+        {{$solicitud->service}}
+    </div>    
+    <div class="col-sm-3">
+        <h5>¿Cómo accediste al formulario?</h5>
+        {{$solicitud->fromwho}}
+    </div>    
+    <div class="col-sm-3">
         <h5>Objectivo del Cliente</h5>
         {{$solicitud->objective}}
-    </div>    
+    </div>  
 </div>
 <hr/>     
 <div class="row">

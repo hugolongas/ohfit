@@ -22,6 +22,8 @@ class CreateSolicitudsTable extends Migration
             $table->string("objective");
             $table->longText("description");
             $table->string("center");
+            $table->string("service");
+            $table->string("fromwho");
             $table->boolean("accepted");
             $table->boolean('replied');
             $table->longText("response")->nullable();

@@ -56,6 +56,8 @@ class SolicitudController extends Controller
             'email' => 'required',
             'phone' => 'required',
             'center'=>'required',
+            'service'=>'required',
+            'fromwho'=>'required',
             'objective' => 'required',
             'politicaPrivacidad'=>'required'
         ]);
@@ -68,6 +70,8 @@ class SolicitudController extends Controller
         $email = $request->input('email');
         $phone = $request->input('phone');
         $center = $request->input('center');
+        $service = $request->input('service');
+        $fromwho = $request->input('fromwho');
         $objective = $request->input('objective');
         $objectiveDescription = $request->input('objective_info');
         $politicaPrivacidad = true;
@@ -82,6 +86,8 @@ class SolicitudController extends Controller
         $solicitud->phone = $phone;
         $solicitud->objective = $objective;
         $solicitud->center = $center;
+        $solicitud->service = $service;
+        $solicitud->fromwho = $fromwho;
         $solicitud->description = $objectiveDescription;
         $solicitud->accepted = $politicaPrivacidad;
         $solicitud->save();
@@ -89,7 +95,7 @@ class SolicitudController extends Controller
         $emailTo =  $mailConfig['address'];
 
         $subject = "Solicitud de información";
-        $message = "objectivo: " . $objective . "<br/> Centro: " . $center;
+        $message = "objectivo: " . $objective . "<br/> Centro: " . $center. "<br/> Servicio: " . $service;
         if ($objectiveDescription != "") {
             $message = $message . "<br/> Descripción: " . $objectiveDescription;
         }
