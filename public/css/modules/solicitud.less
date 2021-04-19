@@ -1,6 +1,6 @@
 #main {
-    .solicitud-info {
-        background-image: url(../img/entrenos.jpg);
+    &.solicitud-info {
+        background-image: url(../img/services-bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -11,14 +11,36 @@
         padding-bottom: 60px;
 
         @media @media-laptop {
-            padding-top: 45px;
+            padding-top: 100px;
             background-position-y: -90px;
         }
 
         .section-container {
-            background-color: rgba(2, 2, 2, 0.9);
             padding: 20px;
-            max-width: 500px;
+            max-width: 100%;
+
+            .online-solicitud-container {
+                margin-top: 70px;
+                margin: 0px auto;
+                max-width: 980px;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.2);
+                color: #ffffff;
+                font-size: 14px;
+            }
+        }
+
+        .online-solicitud-title {
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 60px;
+
+            @media @media-laptop {
+                font-size: 38px;
+            }
         }
 
         .solicitud-container {
@@ -26,9 +48,10 @@
             height: 100%;
             position: absolute;
             background-color: rgba(22, 22, 22, 0.5);
-            top:0px;
+            top: 0px;
+
             .solicitud-modal {
-                background: #000;
+                background-color: rgba(0, 0, 0, 0.8);
                 margin: 0 auto;
                 width: 300px;
                 position: relative;
@@ -38,7 +61,8 @@
                 -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 40%);
                 -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
                 box-shadow: 0 0 10px rgb(0 0 0 / 40%);
-                border-radius: 26px;
+                font-size: 17px;
+                color: #ffffff;
 
                 @media @media-laptop {
                     width: 500px;

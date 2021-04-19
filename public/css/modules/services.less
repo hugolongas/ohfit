@@ -1,0 +1,81 @@
+#main {
+    &.online-services {
+        background-image: url(../img/services-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: auto;
+        padding-top: 90px;
+        background-position-x: center;
+        background-position-y: -10px;
+        padding-bottom: 60px;
+
+        @media @media-laptop {
+            padding-top: 100px;
+            background-position-y: -90px;
+        }
+
+        .section-container {
+            padding: 20px;
+            max-width: 100%;
+        }
+
+        .online-services-title {
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 60px;
+
+            @media @media-laptop {
+                font-size: 38px;
+            }
+        }
+
+        .online-services-container {
+            margin-top: 70px;
+            margin: 0px auto;
+            max-width: 980px;
+            padding: 20px;
+            background-color: #ffffff;
+
+            .service {
+                max-width: 290px;
+                padding: 0px;
+                border: 1px solid rgba(48, 48, 48, 0.2);
+                text-align: center;
+                margin: 0px auto 30px;
+                padding-bottom: 20px;
+
+                .service-info {
+                    .service-title {
+                        font-family: 'raleway', sans-serif;
+                        font-size: 21px;
+                        text-align: center;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        letter-spacing: 1.4px;
+                    }
+
+                    .service-detail {
+                        text-align: left;
+                        padding: 10px 10px 10px 10px;
+                        font-size: 12px;
+
+                        ul {
+                            margin-left: -25px;
+
+                            li {
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}

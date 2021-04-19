@@ -20,6 +20,7 @@
 				<th>Ver</th>				
 				<th>Editar</th>
 				<th>Nombre</th>
+				<th>Resumen</th>
 				<th>Precio (1 mes)</th>
 				<th>Precio (3 mes)</th>
 				<th>Precio (6 mes)</th>
@@ -34,6 +35,7 @@
 				<th>Ver</th>				
 				<th>Editar</th>
 				<th>Nombre</th>
+				<th>Resumen</th>
 				<th>Precio</th>
 				<th>Precio (3 mes)</th>
 				<th>Precio (6 mes)</th>
@@ -59,6 +61,7 @@
 			{data: 'view'},
 			{data: 'edit'},
 			{data: 'name'},
+			{data: 'summary'},
 			{data: 'price_one'},
 			{data: 'price_three'},
 			{data: 'price_six'},

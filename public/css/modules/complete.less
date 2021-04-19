@@ -1,33 +1,41 @@
 #main {
-    .shop-complete {
-        background-image: url(../img/entrenos.jpg);
+    &.shop-complete {
+        background-image: url(../img/services-bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         height: auto;
-        padding-top: 115px;        
+        padding-top: 90px;
         background-position-x: center;
         background-position-y: -10px;
-        padding-bottom: 60px;
-        @media @media-laptop{            
-            height: 900px;
-            padding-top: 130px;
+        color: #ffffff;
+
+        @media @media-laptop {
+            padding-top: 100px;
             background-position-y: -90px;
+            height: 100vh;
         }
-        .section-container{
-            background-color: rgba(2,2,2,0.5);
+
+        .section-container {
+            background-color: rgba(2, 2, 2, 0.5);
             padding: 20px;
             max-width: 100%;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
         }
-        .shop-complete-title {            
+
+        .shop-complete-title {
             font-size: 31px;
             text-align: center;
-            padding-bottom:12px;
-            @media @media-laptop{
-                font-size:31px;
+            padding-bottom: 12px;
+
+            @media @media-laptop {
+                font-size: 31px;
             }
-        }  
-        .shop-complete-text {            
+        }
+
+        .shop-complete-text {
             font-size: 15px;
             text-align: center;
             background-color: rgba(47, 46, 46, 0.8);
@@ -35,10 +43,11 @@
             padding: 35px;
             text-align: center;
             margin: 0px auto 30px;
-            @media @media-laptop{
-                font-size:18px;
+
+            @media @media-laptop {
+                font-size: 18px;
             }
-        }  
-        
+        }
+
     }
 }

@@ -17,6 +17,12 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-12">
+            <h5>Resumen producto</h5>
+            {{$training->summary }}
+        </div> 
+    </div>
+    <div class="row">
         <div class="col-12 col-md-4">
             <h5>Precio del producto (1 mes)</h5>
             {{$training->price_one}}

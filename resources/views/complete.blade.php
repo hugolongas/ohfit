@@ -1,8 +1,7 @@
 @extends('layouts.master')
 @section('bodyClass','shop-complete')
 @section('title','OhFit - Compra completada')
-@section('content')    
-
+@section('content')
 <div class="section-container">    
     <h2 class="shop-complete-title">CONSULTA COMPLETADA</h2>
     <div class="shop-complete-text">
@@ -15,4 +14,7 @@
     </p>
     </div>
 </div>
+@stop
+@section('meta')
+<meta name="robots" content="none">
 @stop

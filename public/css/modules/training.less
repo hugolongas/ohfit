@@ -1,140 +1,186 @@
 #main {
-    .online-training {
-        background-image: url(../img/entrenos.jpg);
+    &.online-training {
+        background-image: url(../img/services-bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         height: auto;
-        padding-top: 90px;        
+        padding-top: 90px;
         background-position-x: center;
         background-position-y: -10px;
-        padding-bottom: 60px;
-        @media @media-laptop{     
-            padding-top: 45px;
+
+        @media @media-laptop {
+            padding-top: 100px;
             background-position-y: -90px;
         }
-        .section-container{
-            background-color: rgba(2,2,2,0.5);
+
+        .section-container {
             padding: 20px;
             max-width: 100%;
         }
 
-        .online-training-title {            
-            font-size: 31px;
+        .online-training-title {
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 38px;
+            font-weight: bold;
             text-align: center;
-            @media @media-laptop{
-                font-size:31px;
+            color: #ffffff;
+            margin-bottom: 60px;
+
+            @media @media-laptop {
+                font-size: 38px;
             }
         }
 
         .online-training-container {
-            margin-top: 70px;
-            margin:0px auto;
-            max-width: 900px;
+            margin: 0px auto;
+            max-width: 980px;
+            background-color: rgba(0, 0, 0, 0.2);
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
 
             .training-option {
-                background-color: rgba(47, 46, 46, 0.8);
+                background-color: #ffffff;
                 width: 288px;
-                padding: 35px;
-                border: 1px solid black;
+                border: 1px solid #3a3a3a;
                 text-align: center;
                 margin: 0px auto 30px;
 
-                .training-title {
-                    font-size: 21px;
-                    text-align: center;
-                    font-weight: 900;
-                    margin-bottom: 20px; 
-                    height: 60px;          
-                    text-transform: uppercase;                             
-                }
-                .training-spacer{
-                    width: 100%;
-                    height: 1px;
-                    border-top:1px solid black;
-                    margin:10px auto;
-                }
-                .training-price{
-                    font-size: 23px;
-                    text-align: center;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                }
-                .btn-collapse-description{
-                    color:white;
-                    font-size: 20px;
-                }
-                .training-description{
-                    text-align: left;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    ul{
-                        margin-left:-25px;
-                        li{
-                            margin-bottom:5px;
+                .training-info {
+                    padding: 30px;
+
+                    .training-title {
+                        font-family: 'Raleway', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        font-weight: 400;
+                        margin-bottom: 12px;
+                    }
+
+                    .training-price {
+
+                        font-family: 'Raleway', sans-serif;
+                        font-size: 70px;
+                        text-align: center;
+                        position: relative;
+
+                        .euro {
+                            font-size: 20px;
+                            top: 0px;
+                            position: absolute;
+                            left: 0px;
                         }
                     }
+
+                    .training-summary {
+                        font-family: 'Raleway', sans-serif;
+                        font-size: 14px;
+                        color: #303030;
+                        margin-bottom: 15px;
+                    }
+
+                    .btn-ohfit {
+                        width: 100%;
+                        border-radius: 0;
+                    }
                 }
-            }           
-        }
-        
-        &.training,
-        &.diet,
-        &.all{
-            min-height: 750px;
-            height: auto;
-            .section-container{
-                padding: 20px 20px;
-                background-color: rgba(0, 0, 0, 0.7);
-            }
-        }        
 
-        .training-form{
-            fieldset:not(:first-of-type) {
-                display: none;
-              }
-              .form-section{
-                  padding-bottom:10px;
-                  border-bottom:1px solid #fbfbfb;
 
-                  #price_container
-                  {
-                      position: relative;
-                      overflow: hidden;
-                      label {
-                          float:left;
-                          width:170px;
-                          margin:4px;
-                          background-color:#EFEFEF;
-                          border-radius:4px;
-                          border:1px solid #D0D0D0;
-                          overflow:auto;
-                          span {
-                              text-align:center;
-                              font-size: 19px;
-                              padding:6px 0px;
-                              display:block;
-                            }
-                            input {
-                                position:absolute;
-                                top:-20px;
+                .training-extra {
+                    border-top: 1px solid black;
 
-                                &:checked + span {
-                                    background-color:#137b16;
-                                    color:#F7F7F7;
+                    .training-desc {
+                        padding: 30px 30px 10px;
+                        font-family: 'Raleway', sans-serif;
+                        font-size: 14px;
+                        color: #303030;
+
+                        ul {
+                            list-style-type: none;
+                            margin-left: -25px;
+
+                            li {
+                                margin-bottom: 5px;
+                                border-bottom: 1px solid rgba(48, 48, 48, 0.2);
+                                padding-bottom: 6px;
+
+                                &:last-child {
+                                    border: none;
                                 }
                             }
                         }
-                        .color {
-                            background-color:#bdbdbd;
-                            color:#333;
+                    }
+
+                }
+
+            }
+        }
+
+        &.training,
+        &.diet,
+        &.all {
+            min-height: 750px;
+            height: auto;
+
+            .online-training-container {
+                padding: 20px 20px;
+                color: #000000;
+                background-color: #ffffff;
+            }
+        }
+
+        .training-form {
+            fieldset:not(:first-of-type) {
+                display: none;
+            }
+
+            .form-section {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #fbfbfb;
+
+                #price_container {
+                    position: relative;
+                    overflow: hidden;
+
+                    label {
+                        float: left;
+                        width: 170px;
+                        margin: 4px;
+                        background-color: #EFEFEF;
+                        border-radius: 4px;
+                        border: 1px solid #D0D0D0;
+                        overflow: auto;
+
+                        span {
+                            text-align: center;
+                            font-size: 19px;
+                            padding: 6px 0px;
+                            display: block;
                         }
-                        .color-selected{
-                            background-color:#137b16;
-                                    color:#F7F7F7;
+
+                        input {
+                            position: absolute;
+                            top: -20px;
+
+                            &:checked+span {
+                                background-color: #4c4c4c;
+                                color: #F7F7F7;
+                            }
                         }
+                    }
+
+                    .color {
+                        background-color: #bdbdbd;
+                        color: #333;
+                    }
+
+                    .color-selected {
+                        background-color: #4c4c4c;
+                        color: #F7F7F7;
                     }
                 }
             }
         }
     }
+}

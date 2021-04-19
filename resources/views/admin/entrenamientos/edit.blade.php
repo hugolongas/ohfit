@@ -40,6 +40,13 @@
         </div>
     </div>
     <div class="form-row">
+        <div class="form-group col-12">
+            <label for="summary">Resumen producto*</label>
+            <input type="text" class="form-control" placeholder="Resumen producto*" id="summary" name="summary"
+                value="{{ old('summary',$training->summary) }}" tabindex="1" />
+        </div>
+    </div>
+    <div class="form-row">
         <div class="form-group col-12  col-md-4">
             <label for="name">Precio del producto 1 mes (solamente numeros)*</label>
             <input type="text" class="form-control" placeholder="Precio*" id="price_one" name="price_one"

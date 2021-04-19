@@ -1,10 +1,11 @@
-.footer {
+.footer-contact {
     background-color: #242323;
     padding: 30px 10px;
 
     @media @media-laptop {
-        padding: 45px 240px;
+        padding: 45px 25%;
     }
+    
 
     .footer-title {
         font-size: 27px;
@@ -22,15 +23,16 @@
 
     .form-block {
         margin-bottom: 50px;
+        overflow: hidden;
 
         .form-control {
-            background-color: #242323;
-            color: #ffffff;
+            background-color: #fafafa;
+            color: #222222;
 
         }
 
         .form-control::placeholder {
-            color: #ffffff;
+            color: #222222;
         }
 
         textarea {
@@ -38,73 +40,68 @@
         }
 
         .btn-ohfit {
-            width: 100%;
+            float: right;
         }
+
     }
 
     .contact-block {
         text-align: center;
-
-        .contact-title {
-            font-size: 30px;
-            text-align: center;
-            color: #D2AB66;
-
-            @media @media-laptop {
-                font-size: 36px;
-            }
-
-            &:after {
-                display: block;
-                content: '';
-                width: 84px;
-                top: 228px;
-                height: 5px;
-                border-top: 3px solid #D2AB66;
-                margin: 0px auto 10px;
-
-                @media @media-laptop {
-                    margin: 0px auto 50px
-                }
-            }
-
+        .contact-logo{
+            width: 151px;
+            margin-bottom:30px;
         }
-
         .contact-info {
-            color: #ffffff;
-            display: inline-block;
+            color: #fafafa;
+            display: block;
             text-align: left;
-            font-size: 20px;
-
-            @media @media-laptop {
-                font-size: 25px;
+            font-size: 14px;
+            margin-bottom:30px;
+            .center {
+                text-decoration: underline;
             }
 
-            i {
+            a {
+                color: #fafafa;
 
-                color: #D2AB66;
-                margin-right: 15px;
-                float: left;
-            }
-
-            span {
-                display: block;
-                float: left;
-                width: 270px;
-
-                @media @media-laptop {
-                    width: 410px;
+                &:hover {
+                    color: #fafafa;
                 }
-            }
-            a{
-                color:#ffffff;
-                &:hover{
-                    color:#ffffff;
-                }
-                &:active{
-                    color:#ffffff;
+
+                &:active {
+                    color: #fafafa;
                 }
             }
         }
+        .contact-extra{
+            .btn-ohfit{
+                display: block;
+                width:114px;
+                height: 40px;
+            }
+            .rrss-container{
+                .link{
+                    img{
+                        width:35px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.footer {
+    background-color: #e12d31;
+    width: 100%;
+    height: 190px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 32px 70px;
+
+    @media @media-laptop {
+        height: 100px;
+        padding: 40px 70px;
     }
 }

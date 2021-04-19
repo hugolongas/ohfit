@@ -22,5 +22,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
+    redirect 301 /entrenamientos /planes
+
     
 </IfModule>

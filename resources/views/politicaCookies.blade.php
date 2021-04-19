@@ -37,3 +37,6 @@
     </div>
 </div>
 @stop
+@section('meta')
+<meta name="robots" content="none">
+@stop

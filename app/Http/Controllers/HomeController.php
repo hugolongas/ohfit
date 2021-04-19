@@ -15,12 +15,25 @@ class HomeController extends Controller
     {
         $colaborators = Colaborator::all();
         $opinions = Opinion::all();
-        return view('home')->with("colaborators",$colaborators)->with("opinions",$opinions);
+        return view('home')->with("opinions",$opinions);
+    }
+
+    public function Method(){
+        return view('metodo');
+    }
+    
+    public function Team(){
+        return view('equipo');
+    }
+
+    public function Enterprises(){
+        return view('empresas');
     }
 
     public function PoliticaPrivacidad(){
         return view('politicaPrivacidad');
     }
+
     public function PoliticaCookie(){
         return view('politicaCookies');
     }
@@ -41,4 +54,5 @@ class HomeController extends Controller
     {
         return view('complete');
     }
+
 }

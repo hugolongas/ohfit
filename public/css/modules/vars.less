@@ -27,129 +27,55 @@
 @os-bold: 700;
 
 #main {
-    font-family: 'Nunito Sans', sans-serif;
-    background-color: #000000;
-    color: #ffffff;
-    position: relative;
-    margin-top: 75px;
+    font-family: 'raleway', sans-serif;
+    font-size: 15px/1.4em;    
+    color: #000000;
+    position: relative;    
 
     @media @media-laptop {
-        margin-top: 116px;
     }
 
-    section {
-        position: relative;
-        width: 100%;
-        margin: 0px auto;
+}
+.btn-ohfit {
+    background-color: #e12d31;
+    border-color: transparent;
+    cursor:pointer;
+    min-height: 43px;
+    min-width: 130px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 32px;
+    @media @media-laptop{
+        font-size: 15px;
+        min-height: 48px;
+        min-width: 162px;
+        line-height: 35px;
     }
-
-    .section-container {
-        max-width: 980px;
-        margin: 0px auto;
-        padding: 0px 20px;
-    }
-
-    .section-title {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 40px;
-        letter-spacing: 1px;
-
-        @media @media-laptop {
-            font-size: 43px;
-            line-height: 55px;
-        }
-
-        &:after {
-            display: block;
-            content: '';
-            width: 84px;
-            top: 228px;
-            height: 5px;
-            border-top: 3px solid #D2AB66;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    }
-
-    a {
-        &.politica-privacidad {
-            color: #ffffff;
-            text-decoration: underline;
-            font-weight: bolder;
-        }
+    &:hover {
+        background-color: #EB8D8F;  
+        color:#7b2e30; 
     }
 }
 
-.btn-ohfit {
-    background-color: #D2AB66;
-    border-color: transparent;
-    border-radius: 20px;
-    height: 42px;
-    min-height: 25px;
-    min-width: 141px;
-    color: #212121;
-    font-size: 20px;
-    font-weight: bold;
+.btn-ohfit-outline {
+    background-color:transparent;
+    border:1px solid #e12d31;
+    cursor:pointer;  
+    min-height: 43px;
+    min-width: 130px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 32px;
+    @media @media-laptop{
+        font-size: 15px;
+        min-height: 48px;
+        min-width: 162px;
+        
+    line-height: 35px;
+    }
 
     &:hover {
-        color: #212121;
+        background-color: #e12d31;       
+        color:#7b2e30; 
     }
-
-    &:active {
-        color: #212121;
-    }
-
-    &:visited {
-        color: #212121;
-    }
-}
-
-.error-message {
-    display: block;
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-}
-
-.alert-container {
-    max-width: 980px;
-    margin: 0px auto;
-    padding: 10px 10px;
-}
-
-//inputs styles
-textarea {
-    resize: none;
-}
-
-#modalReservar {
-    .modal-dialog {
-        margin-top: 20vh;
-
-        .modal-content {
-            background-color: #242323;
-
-            .form-block {
-                .form-control {
-                    background-color: #242323;
-                    color: #ffffff;
-                }
-
-                .form-control::placeholder {
-                    color: #ffffff;
-                }
-
-                textarea {
-                    resize: none;
-                }
-            }
-        }
-    }
-}
-
-.paralax {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
 }

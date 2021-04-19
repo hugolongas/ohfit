@@ -6,6 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="_token" content="{{ csrf_token() }}">
+  <meta name="description" content="Somos Javier Chesa y Albert Porcar, Licenciados en Ciencias de la Actividad Física y el Deporte enfocados en ofrecer entrenamientos holísticos a medida, abordando tanto la parte física, como emocional y nutricional">  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
   @yield('meta')
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
@@ -16,12 +19,9 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="20">
-  <main id="main" class="warpper">
-    @include('partials.navbar')
-    @if(Request::is('/'))
-    @include('partials.dotsMenu')
-    @endif
-    <div id="content" class="@yield('bodyClass')">
+  <main id="main" class="warpper @yield('bodyClass')">
+    @include('partials.navbar')    
+    <div id="content">
       @yield('content')
     </div>
     @include('partials.footer')

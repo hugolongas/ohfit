@@ -78,6 +78,9 @@ class TrainingAdminController extends Controller
         $description = $request->input('description');
         if($description==null)
         $description = "";
+        $summary = $request->input('summary');
+        if($summary==null)
+        $summary = "";
         $url = $request->input('url');
 
         $training = new Training;
@@ -86,6 +89,7 @@ class TrainingAdminController extends Controller
         $training->price_three = $priceThree;
         $training->price_six = $priceSix;
         $training->description = $description;
+        $training->summary = $summary;
         $training->url = $url;
         $training->save();
         return redirect()->route('admin.entrenamientos.show', $training);
@@ -142,6 +146,9 @@ class TrainingAdminController extends Controller
         $description = $request->input('description');
         if($description==null)
         $description = "";
+        $summary = $request->input('summary');
+        if($summary==null)
+        $summary = "";
         $url = $request->input('url');
         
         $training->name = $name;
@@ -149,9 +156,16 @@ class TrainingAdminController extends Controller
         $training->price_three = $priceThree;
         $training->price_six = $priceSix;
         $training->description = $description;
+        $training->summary = $summary;
         $training->url = $url;
         $training->save();
         return redirect()->route('admin.entrenamientos.show', $training);
+    }
+
+    public function delete($id)
+    {
+        $training = Training::findOrFail($id);
+        $training->delete();        
     }
 
     /**

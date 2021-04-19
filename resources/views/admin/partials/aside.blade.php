@@ -7,9 +7,16 @@
     </li>    
     @endif
     @if(Auth::user()->checkRoles("admin"))
-    <li class="nav-item {{ request()->is('entrenamientos')? 'active' : ''}}">        
-        <a class="nav-link" href="{{url('entrenamientos')}}">            
-            <div class="aside-item">Entrenamientos</div>
+    <li class="nav-item {{ request()->is('servicios')? 'active' : ''}}">        
+        <a class="nav-link" href="{{url('servicios')}}">            
+            <div class="aside-item">Servicios</div>
+        </a>
+    </li>
+    @endif
+    @if(Auth::user()->checkRoles("admin"))
+    <li class="nav-item {{ request()->is('planes')? 'active' : ''}}">        
+        <a class="nav-link" href="{{url('planes')}}">            
+            <div class="aside-item">Planes</div>
         </a>
     </li>
     @endif
