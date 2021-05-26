@@ -262,7 +262,7 @@
 @media only screen and (min-width: 992px) {
   #main.home #cita .cita-text {
     font-size: 33px;
-    padding: 72px 0px;
+    padding: 72px 30px;
   }
 }
 #main.home #cita .cita-text .cita-author {
@@ -343,6 +343,40 @@
   width: 165px;
   height: 48px;
   font-size: 14px;
+}
+#main.home #enterprise {
+  width: 100%;
+  background-color: #e12d31;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#main.home #enterprise .enterprise-title {
+  line-height: 1.5em;
+  font-family: 'raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 22px;
+}
+@media only screen and (min-width: 992px) {
+  #main.home #enterprise .enterprise-title {
+    line-height: 2em;
+    font-size: 36px;
+  }
+}
+#main.home #enterprise .enterprise-text {
+  padding: 0px 20px 40px;
+  margin: 0px auto;
+  line-height: 1.2em;
+  text-align: center;
+  font-size: 19px;
+}
+@media only screen and (min-width: 992px) {
+  #main.home #enterprise .enterprise-text {
+    padding: 0px 50px 40px;
+    font-size: 33px;
+  }
 }
 #main.home #weare {
   background-color: #222222;
@@ -782,6 +816,72 @@
 }
 #main.online-metodo .metodo-container .text-extra p {
   margin-bottom: 40px;
+}
+#main.online-empresa {
+  background-image: url(../img/services-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: auto;
+  padding-top: 90px;
+  background-position-x: center;
+  background-position-y: -10px;
+}
+@media only screen and (min-width: 992px) {
+  #main.online-empresa {
+    padding-top: 100px;
+    background-position-y: -90px;
+  }
+}
+#main.online-empresa .section-container {
+  padding: 20px;
+  max-width: 100%;
+}
+#main.online-empresa .empresa-title {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+@media only screen and (min-width: 992px) {
+  #main.online-empresa .empresa-title {
+    font-size: 38px;
+  }
+}
+#main.online-empresa .empresa-container {
+  margin-top: 70px;
+  margin: 0px auto;
+  max-width: 980px;
+  padding: 15px;
+  background-color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 35px;
+}
+@media only screen and (min-width: 992px) {
+  #main.online-empresa .empresa-container {
+    padding: 65px;
+  }
+}
+#main.online-empresa .empresa-container .empresa-section-title {
+  font-family: 'raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  text-align: left;
+  letter-spacing: 1.6px;
+  color: #000000;
+  padding-right: 20px;
+  line-height: unset;
+}
+#main.online-empresa .empresa-container .img-empresa {
+  margin-bottom: 15px;
+}
+#main.online-empresa .empresa-container .btn-container {
+  text-align: center;
+  margin-bottom: 15px;
 }
 #main.online-equipo {
   background-image: url(../img/services-bg.jpg);

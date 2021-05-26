@@ -19,6 +19,7 @@
                         <li>Propuesta personalizada</li>
                         <li>Entrenamiento con tu coach</li>
                         <li>Consecución de tus objetivos</li>
+                    </ul>
                 </div>
             </div>
             <div class="text-extra">

@@ -74,6 +74,7 @@ class SolicitudController extends Controller
         $fromwho = $request->input('fromwho');
         $objective = $request->input('objective');
         $objectiveDescription = $request->input('objective_info');
+        $time = $request->input('time');
         $politicaPrivacidad = true;
 
         if ($objectiveDescription == null)
@@ -89,13 +90,14 @@ class SolicitudController extends Controller
         $solicitud->service = $service;
         $solicitud->fromwho = $fromwho;
         $solicitud->description = $objectiveDescription;
+        $solicitud->time = $time;
         $solicitud->accepted = $politicaPrivacidad;
         $solicitud->save();
         $mailConfig = \Config::get('mail.training');
         $emailTo =  $mailConfig['address'];
 
         $subject = "Solicitud de información";
-        $message = "objectivo: " . $objective . "<br/> Centro: " . $center. "<br/> Servicio: " . $service;
+        $message = "objectivo: " . $objective . "<br/> Centro: " . $center. "<br/> Servicio: " . $service. "<br/> Fecha: " . $time;
         if ($objectiveDescription != "") {
             $message = $message . "<br/> Descripción: " . $objectiveDescription;
         }

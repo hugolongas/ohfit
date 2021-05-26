@@ -23,6 +23,10 @@
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('equipo') ? 'active' : '' }}"
                     href="{{ route('team') }}">Equipo</a>
+            </li>            
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('empresas') || Request::is('empresas') ? 'active' : '' }}"
+                    href="{{ route('enterprise') }}">Empresa</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('planes') || Request::is('planes/*') ? 'active' : '' }}"

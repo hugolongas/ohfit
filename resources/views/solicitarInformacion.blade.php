@@ -49,6 +49,20 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
+                                <label for="time">Hora de entrenamiento</label>
+                                <select class="form-control" name="time" id="time">
+                                    <option value="Mañana"
+                                        {{ old('time') == 'mañana' ? 'selected' : '' }}>
+                                        Mañana</option>
+                                    <option value="Mediodía"
+                                        {{ old('time') == 'Mediodía' ? 'selected' : '' }}>Mediodía</option>
+                                        <option value="Tarde"
+                                        {{ old('time') == 'Tarde' ? 'selected' : '' }}>Tarde</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
                                 <label for="center">Centro</label>
                                 <select class="form-control" name="center" id="center">
                                     <option value="Vivagym Sagrada Familia"

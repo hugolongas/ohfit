@@ -2,9 +2,10 @@
 
 #main {
     &.home {
-        .brand-logo{
+        .brand-logo {
             display: none;
         }
+
         #cover {
             height: auto;
             padding-top: 100px;
@@ -74,7 +75,7 @@
 
                 @media @media-laptop {
                     font-size: 33px;
-                    padding: 72px 0px;
+                    padding: 72px 30px;
                 }
 
                 .cita-author {
@@ -167,6 +168,41 @@
                         font-size: 14px;
                     }
                 }
+            }
+        }
+
+        #enterprise {
+            width: 100%;
+            background-color: #e12d31;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+
+            .enterprise-title {
+                line-height: 1.5em;
+                font-family: 'raleway', sans-serif;
+                font-weight: 700;
+                text-align: center;                
+                padding-top: 20px;
+                font-size: 22px;
+                @media @media-laptop{
+                    line-height: 2em;
+                    font-size: 36px;
+                }
+            }
+
+            .enterprise-text {
+                padding: 0px 20px 40px;
+                margin: 0px auto;
+                line-height: 1.2em;
+                text-align: center;
+                font-size: 19px;
+
+                @media @media-laptop {
+                    padding: 0px 50px 40px;
+                    font-size: 33px;
+                }
+
             }
         }
 
@@ -308,9 +344,10 @@
                     .opinion-text {
                         font-size: 14px;
                         margin: 0px 0px 25px 0;
-                        @media @media-laptop{
+
+                        @media @media-laptop {
                             margin: 0px 0px 45px 0;
-                        }                        
+                        }
                     }
 
                     .comillas {
