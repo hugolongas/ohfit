@@ -10,7 +10,7 @@
             <img src="img/logo-cover.png" />
             <div class="button-container">
                 <a href="{{ route('services') }}" class="btn btn-ohfit-outline">SERVICIOS</a>
-                <a href="#contact" class="btn btn-ohfit">CONTACTA</a>
+                <a href="{{ route('enterprise') }}" class="btn btn-ohfit-outline">WELLNESS EMPRESAS</a>
             </div>
         </div>
     </section>
@@ -115,6 +115,42 @@
             @endforeach
         </div>
     </section>
+
+    <div id="modal-empresa" class="modal-empresa" tabindex="-1" role="dialog">
+        <div class="modal-empresa-body">
+            <p>
+                Eres una empresa y deseas información?
+            </p>
+            <p>
+                Ponte en contacto con nosotros.
+            </p>
+            <form id="empresa_form_modal" method="post">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control form-empresa" placeholder="Tu nombre" id="empresa_name_modal"
+                      name="empresa_name" required />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="email" class="form-control form-empresa" placeholder="Tu email" id="empresa_email_modal"
+                      name="empresa_email" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-empresa" placeholder="Motivo de la consulta"
+                    id="empresa_subject_modal" name="empresa_subject" required />
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control form-empresa" id="empresa_message_modal" name="empresa_message"
+                    placeholder="Cuéntanos..." rows="5"></textarea>
+                </div>
+                <button type="submit" id="submit_empresa_modal" class="btn btn-ohfit"><span>Enviar</span></button>
+                <button type="button" class="btn btn-ohfit float-right modal-empresa-close" aria-label="Close"><span
+                    aria-hidden="true">Cancelar</button>                
+              </form>
+              <div id="response_empresa"></div>
+        </div>
+    </div>
+
 @stop
 
 @section('css')

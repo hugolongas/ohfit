@@ -19,5 +19,16 @@ $(document).ready(function() {
                 $(".brand-logo").hide(200);
             }
         }
+
+        if($("#main").hasClass("home")){
+            if($(window).scrollTop()>500 && !$('#modal-empresa').hasClass('hidden')){               
+                $('#modal-empresa').addClass('show');
+            }
+        }
     });
+
+    $(".modal-empresa-close").on("click",function(){
+        $('#modal-empresa').removeClass('show');
+        $('#modal-empresa').addClass('hidden');
+    })
 });

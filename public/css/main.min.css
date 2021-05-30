@@ -123,7 +123,7 @@
 }
 .btn-ohfit-outline:hover {
   background-color: #e12d31;
-  color: #7b2e30;
+  color: #ffffff;
 }
 #navbar {
   height: auto;
@@ -527,6 +527,32 @@
   stroke-width: 0;
   stroke: #ed1566;
   margin: 0px auto;
+}
+#main.home #modal-empresa {
+  position: fixed;
+  display: none;
+  box-shadow: 0px 0px 10px 0px black;
+  padding: 15px;
+  color: white;
+  background-color: #212529;
+  bottom: 30px;
+  margin: 20px;
+  z-index: 1000;
+}
+@media only screen and (min-width: 992px) {
+  #main.home #modal-empresa {
+    margin-left: 20px;
+  }
+}
+#main.home #modal-empresa.show {
+  display: block;
+}
+#main.home #modal-empresa p {
+  font-size: 14px;
+}
+#main.home #modal-empresa #response_empresa {
+  font-size: 14px;
+  margin-top: 10px;
 }
 #main.online-training {
   background-image: url(../img/services-bg.jpg);
@@ -1091,6 +1117,7 @@
 .footer-contact .form-block {
   margin-bottom: 50px;
   overflow: hidden;
+  margin-top: 20px;
 }
 .footer-contact .form-block .form-control {
   background-color: #fafafa;
@@ -1135,6 +1162,10 @@
   display: block;
   width: 114px;
   height: 40px;
+}
+.footer-contact .contact-block .contact-extra .rrss-container {
+  text-align: left;
+  margin-top: 10px;
 }
 .footer-contact .contact-block .contact-extra .rrss-container .link img {
   width: 35px;

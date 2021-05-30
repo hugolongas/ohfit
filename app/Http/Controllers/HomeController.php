@@ -50,6 +50,18 @@ class HomeController extends Controller
         Mail::to($emailTo)->send(new ContactMail($name,$email,$subject,$message));
     }
 
+    public function SendContactEnterprise(Request $request)
+    {
+        $mailConfig = \Config::get('mail.contact');
+        $emailTo =  $mailConfig['address'];
+        $name = $request->input('name');
+        $subject = $request->input('subject');
+        $subject = "Contacto Empresa: ".$subject;
+        $email = $request->input('email');
+        $message = $request->input('message');
+        Mail::to($emailTo)->send(new ContactMail($name,$email,$subject,$message));
+    }
+
     public function Complete()
     {
         return view('complete');

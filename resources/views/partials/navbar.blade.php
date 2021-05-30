@@ -26,7 +26,7 @@
             </li>            
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('empresas') || Request::is('empresas') ? 'active' : '' }}"
-                    href="{{ route('enterprise') }}">Empresa</a>
+                    href="{{ route('enterprise') }}">Wellness Empresas</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('planes') || Request::is('planes/*') ? 'active' : '' }}"

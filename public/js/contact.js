@@ -67,16 +67,59 @@ $(document).ready(function() {
                 contentType: false,
                 success: function(response) {
                     $('#contact-form_modal')[0].reset();
-                    $('#response').html("se ha enviado el e-mail correctamente, en breve nos pondremos en contacto contigo").fadeIn('slow');
+                    $('#response_modal').html("se ha enviado el e-mail correctamente, en breve nos pondremos en contacto contigo").fadeIn('slow');
                     $('#submit_contact_modal').removeAttr('disabled');
                     setTimeout(function() {
                         $('#response_modal').empty();
-                        $('#modalReservar').modal(hide);
+                        $('#modalReservar').modal('hide');
                     }, 5000);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     $('#submit_contact_modal').removeAttr('disabled');
                     $('#response_modal').text("Ha habido un error enviando el mensaje, ponte en contacto con nosotros por telefono, disculpa las molestias").show();
+                }
+            });
+        } else {
+            $('label.error').hide().fadeIn('slow');
+        }
+    });
+
+    $('#main').on('click', '#submit_empresa_modal', function(e) {
+        e.preventDefault();
+        if ($('#empresa_form_modal').valid()) {
+            $('#submit_empresa_modal').attr('disabled', 'disabled');
+            var form_data = new FormData();
+            var name = $('#empresa_name_modal').val();
+            var email = $('#empresa_email_modal').val();
+            var subject = $('#empresa_subject_modal').val();
+            var message = $('#empresa_message_modal').val();
+
+            form_data.append('name', name);
+            form_data.append('subject', subject);
+            form_data.append('email', email);
+            form_data.append('message', message);
+            $.ajaxSetup({
+                headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') }
+            });
+            $.ajax({
+                url: '/contacto-empresa',
+                dataType: 'text', // what to expect back from the PHP script
+                type: 'post',
+                data: form_data,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    $('#empresa_form_modal')[0].reset();
+                    $('#response_empresa').html("se ha enviado el e-mail correctamente, en breve nos pondremos en contacto contigo").fadeIn('slow');
+                    $('#submit_empresa_modal').removeAttr('disabled');
+                    setTimeout(function() {
+                        $('#modal-empresa').removeClass('show');
+                        $('#modal-empresa').addClass('hidden');
+                    }, 5000);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    $('#submit_empresa_modal').removeAttr('disabled');
+                    $('#response_empresa').text("Ha habido un error enviando el mensaje, ponte en contacto con nosotros por telefono, disculpa las molestias").show();
                 }
             });
         } else {

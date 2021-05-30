@@ -33,6 +33,7 @@ Route::get('/completado', ['uses' => 'HomeController@complete', 'as' => 'home-co
 
 /*Formulario contacto*/
 Route::post('/contacto', ['uses' => 'HomeController@SendContact', 'as' => 'contact.send']);
+Route::post('/contacto-empresa', ['uses' => 'HomeController@SendContactEnterprise', 'as' => 'contactentErprise.send']);
 Route::get('/solicitarInformacion', ['uses' => 'SolicitudController@WebIndex', 'as' => 'info']);
 Route::post('/solicitarInformacion', ['uses' => 'SolicitudController@SendInfo', 'as' => 'info.send']);
 /*otros*/
